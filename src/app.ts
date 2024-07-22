@@ -33,7 +33,7 @@ app.use(
 
 app.use(
   cors({
-    origin: "http://synergyenglk.com", // Adjust this to your frontend URL
+    origin: "https://synergyenglk.com", // Adjust this to your frontend URL
     credentials: true, // Allow credentials (cookies) to be sent
   })
 );
