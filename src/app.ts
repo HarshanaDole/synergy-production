@@ -22,7 +22,9 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 60 * 60 * 1000,
+      maxAge: 60 * 60 * 1000, // 1 hour
+      sameSite: "none", // Ensure cookies are sent in cross-site requests
+      secure: process.env.NODE_ENV === "production", // Set to true in production
     },
     rolling: true,
     store: MongoStore.create({
